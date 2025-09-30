@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package msg;
+
+
+option go_package = "assignment1/code/proto;proto";
+
+service Messenger {
+    rpc Send(SendRequest) returns (SendReply){}
+
+}
+
+message SendRequest {
+    string message = 1;
+}
+
+message SendReply {
+    string status = 1;
+}
